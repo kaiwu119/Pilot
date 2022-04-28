@@ -774,11 +774,13 @@ namespace Pilot
         }
         else
         {
+            
             ImGui::TreeNodeEx(node->m_file_name.c_str(),
                               ImGuiTreeNodeFlags_Leaf | ImGuiTreeNodeFlags_NoTreePushOnOpen |
                                   ImGuiTreeNodeFlags_SpanFullWidth);
             if (ImGui::IsItemClicked() && !ImGui::IsItemToggledOpen())
             {
+                // open object file
                 onFileContentItemClicked(node);
             }
             ImGui::TableNextColumn();
